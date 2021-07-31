@@ -15,6 +15,14 @@ header h1 {
   color: #fff;
 }
 
+header input {
+  border-radius: 25px;
+  min-height: 30px;
+  outline: none;
+  border: 3px solid #33908c;
+}
+
+
 header .cart {
   position: relative;
 }
@@ -35,6 +43,24 @@ header .cart .cart_cnt {
 
 header .cart .cart_icon img {
   width: 40px;
+}
+#sort {
+  margin-top:10px; 
+  display: inline-block;
+}
+
+#sort label {
+  opacity: .8;
+  margin-left: 15px;
+  color: #33908c;
+  border-radius: 10px;
+  padding: 2px 4px;
+  border: 2px solid #9eede9;
+}
+
+#sort label.selected {
+  opacity: 1;
+  background: #9eede9;
 }
 
 #wrapper {
