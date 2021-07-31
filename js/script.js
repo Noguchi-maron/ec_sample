@@ -139,15 +139,6 @@ window.onload = function () {
     });
   });
 
-  const jpnAlp = document.querySelector('#jpnAlp');
-  const heigher = document.querySelector('#heigher');
-  const lower = document.querySelector('#lower');
-  const priceArray = [];
-  itemContents.forEach(item => {
-    priceArray.push(item.price)
-  });
-
-  console.log(priceArray);
   //ソート機能
 
   sortForm.addEventListener('click', () => {
