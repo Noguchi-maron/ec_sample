@@ -102,16 +102,14 @@ window.onload = function () {
       cart_cnt_icon.innerHTML = cart_cnt;
     }
   }
-
-
-//ひらがなの配列作成
+  
   let kanaArray = [];
-  itemContents.forEach(item => {
-    kanaArray.push(item.kana);
-  });
-
 //検索機能
   searchWin.addEventListener('keyup', () => {
+    //ひらがなの配列作成
+    itemContents.forEach(item => {
+      kanaArray.push(item.kana);
+    });
     const searchTxt = searchWin.value;
     itemLists.forEach(item => {
       item.classList.remove('hidden');
