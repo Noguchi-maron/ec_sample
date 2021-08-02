@@ -71,21 +71,20 @@ window.onload = function () {
       kana: "だんべる",
       img: "img/dumbbell.png"
     },
-  ],
-  itemTitles = document.querySelectorAll('.item_title h2'),//itemの名前を入れるh2
-  priceTags = document.querySelectorAll('.js_get_price'),
-  imgTag = document.querySelectorAll('.item_img img');
+  ];
 
-  itemTitles.forEach((title, index)=> {
-    title.textContent = itemContents[index].name;
-  });
-  priceTags.forEach((price, index) => {
-    price.textContent = itemContents[index].price;
-  });
-  imgTag.forEach((img, index) => {
-    img.src = itemContents[index].img;
-
-  });
+  const createItemList = () => {
+    document.querySelectorAll('.item_title h2').forEach((title, index)=> {
+      title.textContent = itemContents[index].name;
+    });
+    document.querySelectorAll('.js_get_price').forEach((price, index) => {
+      price.textContent = itemContents[index].price;
+    });
+    document.querySelectorAll('.item_img img').forEach((img, index) => {
+      img.src = itemContents[index].img;
+    });
+  }
+  createItemList();
 
   // すでにカートに商品が入っている場合、カートアイコンのカウント表示とカートボタンをアクティブにする
   if (items) {
@@ -154,15 +153,8 @@ window.onload = function () {
     } else{
       itemContents.sort((a, b) => a.price - b.price);
     } 
-    itemTitles.forEach((title, index)=> {
-      title.textContent = itemContents[index].name;
-    });
-    priceTags.forEach((price, index) => {
-      price.textContent = itemContents[index].price;
-    });
-    imgTag.forEach((img, index) => {
-      img.src = itemContents[index].img;
-    });
+
+    createItemList();
   });
 
   
